@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="proximanova_regular.ttf">
+            <string>ProximaNova-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Authentication View Controller-->
+        <scene sceneID="y55-ca-9YN">
+            <objects>
+                <viewController storyboardIdentifier="AuthenticationViewController" id="OPz-Do-yoc" customClass="AuthenticationViewController" customModule="Analog" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="flL-jy-lxd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="analog-title" translatesAutoresizingMaskIntoConstraints="NO" id="Efd-bc-2Si">
+                                <rect key="frame" x="159" y="60" width="96" height="31"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qLX-AZ-SBy">
+                                <rect key="frame" x="66" y="115" width="282.5" height="63.5"/>
+                                <string key="text">The easiest way to track 
+time, space ever</string>
+                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="xeM-qY-Vln">
+                                <rect key="frame" x="73.5" y="268.5" width="267" height="359"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcome-illustration" translatesAutoresizingMaskIntoConstraints="NO" id="8SC-L8-mjb">
+                                        <rect key="frame" x="0.0" y="0.0" width="267" height="268"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RON-wF-mj7">
+                                        <rect key="frame" x="45" y="284" width="177" height="43"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="43" id="gbP-Mc-gTS"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="177" id="j89-Jq-eJ6"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="GET STARTED">
+                                            <color key="titleColor" name="analog-pink-color"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="21"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="getStartedPressed:" destination="OPz-Do-yoc" eventType="touchUpInside" id="rpF-Mv-PQo"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vCr-Yy-6ZL">
+                                        <rect key="frame" x="41" y="343" width="185" height="16"/>
+                                        <gestureRecognizers/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Already have an account? Log in">
+                                                <attributes>
+                                                    <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <font key="NSFont" size="13" name="ProximaNova-Regular"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="YhW-L3-SPr" appends="YES" id="g7k-fg-T8J"/>
+                                        </connections>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" By continuing, you agree to Analog’s Terms of Services" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rjt-St-n5K">
+                                <rect key="frame" x="61" y="848.5" width="292" height="13.5"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="292" id="eiq-rG-MX4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="dom-1D-fLi" appends="YES" id="Zlv-bE-XOc"/>
+                                </connections>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="v5X-Qk-M8w"/>
+                        <color key="backgroundColor" name="analog-main-color"/>
+                        <constraints>
+                            <constraint firstItem="Rjt-St-n5K" firstAttribute="centerX" secondItem="flL-jy-lxd" secondAttribute="centerX" id="6ME-ol-xuu"/>
+                            <constraint firstItem="xeM-qY-Vln" firstAttribute="centerY" secondItem="flL-jy-lxd" secondAttribute="centerY" priority="500" id="KV4-KP-Q4U"/>
+                            <constraint firstItem="Efd-bc-2Si" firstAttribute="top" secondItem="v5X-Qk-M8w" secondAttribute="top" constant="16" id="Rnr-NV-n2E"/>
+                            <constraint firstItem="xeM-qY-Vln" firstAttribute="centerX" secondItem="flL-jy-lxd" secondAttribute="centerX" id="STS-AU-W5u"/>
+                            <constraint firstItem="qLX-AZ-SBy" firstAttribute="top" secondItem="Efd-bc-2Si" secondAttribute="bottom" constant="24" id="W0o-mo-Khk"/>
+                            <constraint firstItem="Efd-bc-2Si" firstAttribute="centerX" secondItem="flL-jy-lxd" secondAttribute="centerX" id="gYv-MO-dXO"/>
+                            <constraint firstItem="Rjt-St-n5K" firstAttribute="bottom" secondItem="v5X-Qk-M8w" secondAttribute="bottom" id="gel-M5-L2e"/>
+                            <constraint firstItem="xeM-qY-Vln" firstAttribute="top" relation="greaterThanOrEqual" secondItem="qLX-AZ-SBy" secondAttribute="bottom" constant="8" id="iAy-YX-Iau"/>
+                            <constraint firstItem="qLX-AZ-SBy" firstAttribute="centerX" secondItem="Efd-bc-2Si" secondAttribute="centerX" id="vgB-DX-V1L"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="getStartedButton" destination="RON-wF-mj7" id="QJC-Uo-aUR"/>
+                        <outlet property="loginLabel" destination="vCr-Yy-6ZL" id="jai-Sr-ejx"/>
+                        <outlet property="signupView" destination="eVw-pC-vn5" id="zzC-uC-n5l"/>
+                        <outlet property="termsOfServicesLabel" destination="Rjt-St-n5K" id="AwD-V6-3aF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sdS-wC-G5G" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="YhW-L3-SPr">
+                    <connections>
+                        <action selector="loginTextTapped:" destination="OPz-Do-yoc" id="ZUC-E5-pTC"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="dom-1D-fLi">
+                    <connections>
+                        <action selector="termsOfServicesTextTapped:" destination="OPz-Do-yoc" id="A2m-S9-9kr"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <view contentMode="scaleToFill" id="eVw-pC-vn5" customClass="SignupView" customModule="Analog" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <subviews>
+                        <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="7BH-Az-03I">
+                            <rect key="frame" x="20" y="165" width="374" height="450"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4E7-3n-tUh">
+                                    <rect key="frame" x="30" y="30" width="314" height="42"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="42" id="0qs-Sj-2n4"/>
+                                    </constraints>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="16" maxY="0.0"/>
+                                    <state key="normal" title="Use phone" image="user-circle">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="21"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" red="0.85490196080000003" green="0.85490196080000003" blue="0.85490196080000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N2p-hV-IVQ">
+                                    <rect key="frame" x="30" y="88" width="314" height="42"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="16" maxY="0.0"/>
+                                    <state key="normal" title="Continue with Facebook" image="facebook-circle">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="21"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" red="0.85490196080000003" green="0.85490196080000003" blue="0.85490196080000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nmb-GX-6g4">
+                                    <rect key="frame" x="30" y="146" width="314" height="42"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="16" maxY="0.0"/>
+                                    <state key="normal" title="Continue with Google" image="google-circle">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="21"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" red="0.85490196080000003" green="0.85490196080000003" blue="0.85490196080000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gXT-BB-xac">
+                                    <rect key="frame" x="30" y="204" width="314" height="42"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="16" maxY="0.0"/>
+                                    <state key="normal" title="Continue with Linkedin" image="linkedin-circle">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="21"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" red="0.85490196080000003" green="0.85490196080000003" blue="0.85490196080000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VL5-eQ-aIH">
+                                    <rect key="frame" x="30" y="262" width="314" height="42"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="16" maxY="0.0"/>
+                                    <state key="normal" title="Continue with Outlook" image="outlook-circle">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="21"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" red="0.85490196080000003" green="0.85490196080000003" blue="0.85490196080000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Swm-vl-yO0">
+                                    <rect key="frame" x="30" y="320" width="314" height="42"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="16" maxY="0.0"/>
+                                    <state key="normal" title="Continue with Office 365" image="microsoft-circle">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="21"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" red="0.85490196080000003" green="0.85490196080000003" blue="0.85490196080000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tMo-bZ-Kum">
+                                    <rect key="frame" x="30" y="378" width="314" height="42"/>
+                                    <color key="backgroundColor" red="0.89019607840000003" green="0.13725490200000001" blue="0.47058823529999999" alpha="0.089999999999999997" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="Cancel">
+                                        <color key="titleColor" name="analog-pink-color"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="21"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="cancelPressed:" destination="OPz-Do-yoc" eventType="touchUpInside" id="uU9-gx-KSI"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <edgeInsets key="layoutMargins" top="30" left="30" bottom="30" right="30"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </stackView>
+                    </subviews>
+                    <viewLayoutGuide key="safeArea" id="GRs-zh-ktu"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.29967369030000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="7BH-Az-03I" firstAttribute="centerY" secondItem="GRs-zh-ktu" secondAttribute="centerY" id="1O7-UQ-Rls"/>
+                        <constraint firstItem="7BH-Az-03I" firstAttribute="centerX" secondItem="GRs-zh-ktu" secondAttribute="centerX" id="BoU-cI-vuU"/>
+                        <constraint firstItem="GRs-zh-ktu" firstAttribute="trailing" secondItem="7BH-Az-03I" secondAttribute="trailing" constant="20" id="Pih-Lm-0Ec"/>
+                        <constraint firstItem="7BH-Az-03I" firstAttribute="leading" secondItem="GRs-zh-ktu" secondAttribute="leading" constant="20" id="XTX-MC-dEe"/>
+                    </constraints>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="k64-yp-09d">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" id="wvU-Li-RMu" customClass="LoginViewController" customModule="Analog" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B4z-5b-md2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="chU-UT-XJs"/>
+                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VwM-aC-sYE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1077" y="138"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="analog-title" width="96" height="31"/>
+        <image name="facebook-circle" width="21" height="21"/>
+        <image name="google-circle" width="21" height="21"/>
+        <image name="linkedin-circle" width="21" height="21"/>
+        <image name="microsoft-circle" width="21" height="21"/>
+        <image name="outlook-circle" width="21" height="21"/>
+        <image name="user-circle" width="21" height="21"/>
+        <image name="welcome-illustration" width="267" height="268"/>
+        <namedColor name="analog-main-color">
+            <color red="0.4779999852180481" green="0.28200000524520874" blue="0.75300002098083496" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="analog-pink-color">
+            <color red="0.88999998569488525" green="0.13699999451637268" blue="0.47099998593330383" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
